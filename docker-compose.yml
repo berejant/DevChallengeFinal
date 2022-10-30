@@ -1,0 +1,43 @@
+version: '3.9'
+
+services:
+  api:
+    build:
+      context: src/
+    ports:
+      - '8080:8080'
+    healthcheck:
+      test: ["CMD", "wget", "-nv", "-t1", "--spider", "http://localhost:8080/healthcheck"]
+      interval: 5s
+      timeout: 5s
+      retries: 3
+      start_period: 1s
+
+  postman:
+    image: postman/newman:alpine
+    profiles:
+      - testing
+    command:
+      run MineDetectors.postman_collection.json
+      -k -r cli
+      --env-var API_HOST=http://api:8080
+      --iteration-count 2
+    volumes:
+      - ./tests:/etc/newman
+    depends_on:
+      api:
+        condition: service_healthy
+
+  siege:
+    image: yokogawa/siege
+    profiles:
+      - testing
+    command: --concurrent=800 --time=60S --internet --file /urls.txt
+    depends_on:
+      api:
+        condition: service_healthy
+    volumes:
+      - ./siege/urls.txt:/urls.txt
+      - ./siege/log:/var/log
+    environment:
+      - API_HOST=http://api:8080

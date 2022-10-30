@@ -1,0 +1,9 @@
+Pixel count 25 in (0,0)-(5,5); color sum 4845; darkLevel 24
+Pixel count 25 in (6,0)-(11,5); color sum 2550; darkLevel 60
+Pixel count 25 in (12,0)-(17,5); color sum 3060; darkLevel 52
+Pixel count 25 in (0,6)-(5,11); color sum 2550; darkLevel 60
+Pixel count 25 in (6,6)-(11,11); color sum 3050; darkLevel 52
+Pixel count 25 in (12,6)-(17,11); color sum 2550; darkLevel 60
+Pixel count 25 in (0,12)-(5,17); color sum 3825; darkLevel 40
+Pixel count 25 in (6,12)-(11,17); color sum 255; darkLevel 96
+Pixel count 25 in (12,12)-(17,17); color sum 4845; darkLevel 24
