@@ -70,4 +70,3 @@ Shortest transaction:           0.00
 
 ## Optional. How to view tests.
 Import collection `tests/MineDetectors.postman_collection.json` into [Postman app](https://web.postman.co/).
-Did not give collection public link because it can be associated with my personal data.
