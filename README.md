@@ -4,7 +4,7 @@ Implementation of [Online Final Task Backend | DEV Challenge XIX](https://docs.g
 
 
 # Stack
-1. [Golang](https://go.dev/) - high performance language for make API-layer between client and database with minimal delay
+1. [Golang](https://go.dev/) - high performance language for make API-layer
 2. [Gin Web Framework](https://github.com/gin-gonic/gin) - help build API fast: router, request validation, building response.
 3. Built in [Golang image standard library](https://pkg.go.dev/image@go1.19.2)
 4. [Postman](https://www.postman.com/) - Useful tool which provide UI for create API tests and next run it within [docker runner](https://hub.docker.com/r/postman/newman/)
